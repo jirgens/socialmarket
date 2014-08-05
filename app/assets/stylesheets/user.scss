@@ -1,0 +1,38 @@
+.container-fluid {
+  width: 940px;
+  text-align: center;
+}
+  @media screen and (max-width:940px) {
+    .container-fluid {
+      width: auto;
+    }
+  }
+
+#gravatar {
+  margin: 15px;
+  float: left;
+}
+
+.section.user {
+  margin-top: 40px;
+}
+
+section.user_profile {
+  padding: 20px;
+  #avatar {
+    float: left;
+    margin: 15px;
+  }
+  img {
+    margin-right: 10px;
+  }
+  a {
+    float: right;
+  }
+}
+
+#follow {
+  a {
+    float: left;
+  }
+}

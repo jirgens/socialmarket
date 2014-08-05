@@ -1,0 +1,28 @@
+%section.col-lg-8#product_form
+  .form-horizontal
+    = bootstrap_form_for(@product, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10", :html => {:multipart => true}) do |f|
+      %div.form-group
+        = f.text_field :title
+        %br/
+      %div.form-group
+        = f.text_field :description
+        %br/
+      %div.form-group
+        = f.text_field :price
+        %br/
+      %div.form-group
+        = f.file_field :pic1
+        %br/
+      %div.form-group
+        = f.file_field :pic2
+        %br/
+      %div.form-group
+        = f.file_field :pic3
+      %br/
+      %div.form-group
+        = f.file_field :pic4
+      %br/
+      %fieldset.actions.form-group
+      .col-sm-6.col-md-offset-3
+        = f.submit(@product.new_record? ? "List Your Thing" : "Edit Your Thing", class: 'btn btn-success')
+      %br

@@ -1,0 +1,15 @@
+= bootstrap_form_for @user do |f|
+  = render 'layouts/messages', obj: @user
+  .control-group
+    = f.text_field :username
+  .control-group
+    = f.text_field :full_name
+  .control-group
+    = f.text_field :street_address
+  .control-group
+    = f.text_field :city
+  .control-group
+    = f.text_field :state
+  .control-group
+    = f.text_field :zip_code
+  = f.submit 'Update Profile', class: 'btn btn-success'

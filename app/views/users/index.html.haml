@@ -1,0 +1,19 @@
+%header
+  %h2 Thing Slingers
+%main
+  - @users.each do |user|
+    .well
+      %img.pull-left(src="http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email.downcase)}?s=55")
+      %strong= user.username
+      %br
+      %p.muted User since #{user.created_at.to_formatted_s(:long)}
+      %hr/
+      .row#follow
+        %p add blerb column for bio blerb
+        = link_to "Follow", relationships_path(leader_id: user.id), method: :post, class: "btn"
+      %br
+      .row
+        - user.recent_products.each do |product|
+          = link_to product do
+            = image_tag product.pic1_url(:thumb).to_s
+      

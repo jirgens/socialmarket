@@ -1,0 +1,4 @@
+.row
+  - user.recent_products.each do |product|
+    = link_to product do
+      = image_tag product.pic1_url(:thumb).to_s
